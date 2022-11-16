@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./YekanBakhFaNumHairline.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./YekanBakhFaNumThin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./YekanBakhFaNumLight.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./YekanBakhFaNumRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./YekanBakhFaNumMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: bold;
+  font-style: normal;
+  src: url("./YekanBakhFaNumBold.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 900;
+  font-style: normal;
+  src: url("./YekanBakhFaNumHeavy.woff") format("woff");
+}
+@font-face {
+  font-family: "YekanBakh";
+  font-weight: 950;
+  font-style: normal;
+  src: url("./YekanBakhFaNumFat.woff") format("woff");
+}
