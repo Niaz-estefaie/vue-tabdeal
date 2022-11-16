@@ -1,9 +1,9 @@
 <script setup>
-import { onMounted, reactive, computed } from "vue";
+import { onMounted, onUnmounted, reactive, computed } from "vue";
 import axios from "axios";
 import Button from "../../components/base/Button.vue";
 
-const state = reactive({ cryptoArray: [], search: "" });
+const state = reactive({ cryptoArray: [], search: "", timer: null });
 
 const filteredList = computed(() => {
   return state.cryptoArray.filter((crypto) => {
@@ -17,7 +17,7 @@ const filteredList = computed(() => {
 
 const getCryptoList = () => {
   axios
-    .get("https://apitabdeal.org/r/plots/currency_prices")
+    .get("https://apitabdeal.org/r/plots/currency_prices/")
     .then((response) => {
       state.cryptoArray = response.data;
     });
@@ -43,7 +43,7 @@ const numberFormatter = (num, digits) => {
   var item = lookup
     .slice()
     .reverse()
-    .find(function (item) {
+    .find((item) => {
       return num >= item.value;
     });
   return item
@@ -53,7 +53,12 @@ const numberFormatter = (num, digits) => {
 
 onMounted(() => {
   getCryptoList();
+  state.timer = setInterval(() => {
+    getCryptoList();
+  }, 60000);
 });
+
+onUnmounted(() => clearInterval(state.timer));
 </script>
 
 <template>
@@ -155,9 +160,11 @@ onMounted(() => {
                   }}
                 </span>
               </td>
-              <td class="text-sm hidden sm:block">
-                {{ numberFormatter(crypto.usdt_volume, 0) }}
-                <span class="light-text">USDT</span>
+              <td class="text-sm hidden sm:flex">
+                <span dir="ltr">
+                  {{ numberFormatter(crypto.usdt_volume, 0) }}
+                  <span class="light-text">USDT</span>
+                </span>
               </td>
               <td>
                 <Button
