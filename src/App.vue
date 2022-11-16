@@ -5,6 +5,8 @@ import TheHeader from "./layouts/TheHeader.vue";
 import Banner from "./layouts/Banner.vue";
 import Crypto from "./layouts/CryptoSection.vue";
 import Carousel from "./layouts/Carousel.vue";
+import Join from "./layouts/Join.vue";
+import Why from "./layouts/Why.vue";
 </script>
 
 <template>
@@ -12,4 +14,6 @@ import Carousel from "./layouts/Carousel.vue";
   <banner />
   <crypto />
   <carousel />
+  <join />
+  <why />
 </template>

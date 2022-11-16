@@ -54,7 +54,7 @@ import Button from "../components/base/Button.vue";
   @apply mb-4 flex flex-col sm:flex-row items-center leading-[1.57] font-medium text-[42px];
 }
 .banner-text {
-  @apply text-secondary-lightest text-sm sm:text-lg mb-2;
+  @apply text-secondary-light text-sm sm:text-lg mb-2;
 }
 .banner-section-outer {
   @apply absolute left-0 z-0 flex max-w-full overflow-hidden;
