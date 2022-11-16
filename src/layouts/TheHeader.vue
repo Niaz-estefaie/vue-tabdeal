@@ -3,10 +3,8 @@ import Button from "../components/base/Button.vue";
 </script>
 
 <template>
-  <div
-    class="w-full flex items-center justify-between h-16 bg-black text-gray-700 z-10 px-4"
-  >
-    <div class="flex items-center gap-4">
+  <div class="header-container">
+    <div class="header-base">
       <a href="">
         <img
           src="https://tabdeal.org/_nuxt/image/6a75fe.webp"
@@ -15,7 +13,7 @@ import Button from "../components/base/Button.vue";
           height="40"
         />
       </a>
-      <div class="hidden md:flex md:justify-between md:items-center gap-2">
+      <div class="header-group-button">
         <Button
           borderClasses="border border-btn-secondary"
           colorClasses="bg-transparent text-btn-secondary"
@@ -51,7 +49,10 @@ import Button from "../components/base/Button.vue";
       >
         <template v-slot:text>ورود</template>
       </Button>
-      <Button colorClasses="bg-primary text-black" effectClass="hover:opacity-90">
+      <Button
+        colorClasses="bg-primary text-black"
+        effectClass="hover:opacity-90"
+      >
         <template v-slot:text>ثبت نام</template>
       </Button>
       <Button
@@ -64,3 +65,15 @@ import Button from "../components/base/Button.vue";
     </div>
   </div>
 </template>
+
+<style scoped>
+.header-container {
+  @apply w-full flex items-center justify-between h-16 bg-black text-gray-700 z-10 px-4;
+}
+.header-base {
+  @apply flex items-center gap-4;
+}
+.header-group-button {
+  @apply hidden md:flex md:justify-between md:items-center gap-2;
+}
+</style>

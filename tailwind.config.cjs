@@ -11,6 +11,7 @@ module.exports = {
           DEFAULT: "#27272a",
           darkest: "#1a1c1f",
         },
+        brown: "#b28b09",
         "btn-secondary": "#bfbaa3",
         "btn-hover": "#292929",
       },

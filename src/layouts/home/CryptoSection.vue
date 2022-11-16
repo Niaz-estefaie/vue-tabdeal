@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, reactive } from "vue";
 import axios from "axios";
-import Button from "../components/base/Button.vue";
+import Button from "../../components/base/Button.vue";
 
 const state = reactive({ cryptoArray: [] });
 
