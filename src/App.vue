@@ -4,10 +4,12 @@
 import TheHeader from "./layouts/TheHeader.vue";
 import Banner from "./layouts/Banner.vue";
 import Crypto from "./layouts/CryptoSection.vue";
+import Carousel from "./layouts/Carousel.vue";
 </script>
 
 <template>
   <the-header />
   <banner />
   <crypto />
+  <carousel />
 </template>
