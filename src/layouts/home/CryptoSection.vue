@@ -1,9 +1,19 @@
 <script setup>
-import { onMounted, reactive } from "vue";
+import { onMounted, reactive, computed } from "vue";
 import axios from "axios";
 import Button from "../../components/base/Button.vue";
 
-const state = reactive({ cryptoArray: [] });
+const state = reactive({ cryptoArray: [], search: "" });
+
+const filteredList = computed(() => {
+  return state.cryptoArray.filter((crypto) => {
+    return (
+      crypto.name.toLowerCase().includes(state.search.toLowerCase()) ||
+      crypto.name_fa.toLowerCase().includes(state.search.toLowerCase()) ||
+      crypto.symbol.toLowerCase().includes(state.search.toLowerCase())
+    );
+  });
+});
 
 const getCryptoList = () => {
   axios
@@ -70,6 +80,7 @@ onMounted(() => {
             <input
               type="search"
               id="default-search"
+              v-model="state.search"
               class="search-input"
               placeholder="جست و جو نماد، نام و ..."
               required
@@ -109,7 +120,7 @@ onMounted(() => {
           </thead>
           <tbody>
             <tr
-              v-for="crypto in state.cryptoArray.slice(0, 7)"
+              v-for="crypto in filteredList.slice(0, 7)"
               :key="crypto.id"
               class="table-row"
             >
@@ -167,7 +178,7 @@ onMounted(() => {
 
 <style scoped>
 .crypto-section {
-  @apply container mx-auto sm:-mt-16 bg-white z-30 rounded-xl px-3 py-6 sm:shadow-xl;
+  @apply container mx-auto sm:-mt-16 bg-white z-30 rounded-xl px-3 py-6 sm:shadow-xl relative;
 }
 .crypto-text {
   @apply hidden sm:flex flex-col;
