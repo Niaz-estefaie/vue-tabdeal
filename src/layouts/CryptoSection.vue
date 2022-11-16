@@ -170,7 +170,7 @@ onMounted(() => {
   @apply container mx-auto sm:-mt-16 bg-white z-30 rounded-xl px-3 py-6 sm:shadow-xl;
 }
 .crypto-text {
-  @apply hidden sm:flex;
+  @apply hidden sm:flex flex-col;
 }
 .crypto-section-title {
   @apply flex flex-col sm:flex-row justify-items-start justify-between mb-2 py-2 sm:px-3;
@@ -182,7 +182,7 @@ onMounted(() => {
   @apply text-sm text-gray-500;
 }
 .crypto-subtitle-mobile {
-  @apply font-medium text-sm text-gray-600 leading-[1.57rem] font-bold;
+  @apply block sm:hidden font-medium text-sm text-gray-600 leading-[1.57rem] font-bold;
 }
 .crypto-search {
   @apply text-sm text-gray-500 mt-4;
