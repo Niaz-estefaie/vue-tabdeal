@@ -8,8 +8,8 @@ import Button from "../components/base/Button.vue";
       <div class="banner-section-inner"></div>
     </div>
     <div class="banner-section-text">
-      <p class="banner-title">
-        صرافی ارز دیجیتال
+      <div class="banner-title">
+        <div>صرافی ارز دیجیتال</div>
         <img
           src="https://tabdeal.org/images/homepage/tabdeal-typo-logo-white.svg"
           alt="tabdeal"
@@ -17,7 +17,7 @@ import Button from "../components/base/Button.vue";
           height="44"
           class="mr-3"
         />
-      </p>
+      </div>
       <p class="banner-text">
         خرید و فروش امن و آسان به‌روزترین ارزهای دیجیتال جهان
       </p>
@@ -48,15 +48,13 @@ import Button from "../components/base/Button.vue";
   @apply w-full bg-secondary-darkest z-0 flex;
 }
 .banner-section-text {
-  @apply text-white flex flex-col justify-center items-center w-full z-30;
+  @apply text-white flex flex-col justify-center items-center w-full z-30 px-2;
 }
 .banner-title {
-  @apply mb-4 flex items-center leading-[1.57];
-  font-size: 42px;
-  font-weight: 500;
+  @apply mb-4 flex flex-col sm:flex-row items-center leading-[1.57] font-medium text-[42px];
 }
 .banner-text {
-  @apply text-secondary-lightest text-lg mb-2;
+  @apply text-secondary-lightest text-sm sm:text-lg mb-2;
 }
 .banner-section-outer {
   @apply absolute left-0 z-0 flex max-w-full overflow-hidden;
@@ -72,7 +70,7 @@ import Button from "../components/base/Button.vue";
   height: inherit;
 }
 .banner-form-section {
-  @apply flex flex-col sm:flex-row justify-center gap-4 sm:items-center px-3 sm:px-0 text-black w-[600px] sm:w-full;
+  @apply flex flex-col sm:flex-row justify-center gap-4 sm:items-center px-3 sm:px-0 text-black md:w-[600px] sm:w-full;
 }
 .banner-input {
   @apply h-14 px-6 text-lg leading-7 leading-loose sm:w-2/3 w-full rounded placeholder-gray-400 focus:outline-0;
