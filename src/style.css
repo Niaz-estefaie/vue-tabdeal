@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./fonts/gilroy/gilroy.css";
-@import "./fonts/yekan/yekan.css";
-
 html {
   font-family: "YekanBakh", "gilroy", serif !important;
 }
